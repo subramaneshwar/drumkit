@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arvo", cursive;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+
+.w {
+    background-image: url('crash.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.a {
+    background-image: url('tom2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s {
+    background-image: url('tom3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.d {
+    background-image: url('tom1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.j {
+    background-image: url('snare.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.k {
+    background-image: url('tom4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.l {
+    background-image: url('kick.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.all {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+    border: 10px solid pink;
+    color: deeppink;
+    text-shadow: 3px 12px black;
+    font-size: 100px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+    font-size: 120px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #DBEDF3;
+    text-shadow: 3px 2px #DA0463;
+}

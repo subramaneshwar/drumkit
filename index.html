@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="tit">Drum 🥁 Kit</h1>
+    <div class="all">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+    </div>
+    <script>
+        let key = document.getElementsByTagName("button").length
+        let keys = document.getElementsByTagName("button")
+        for (let i = 0; i < key; i++) {
+            keys[i].addEventListener("click", function () {
+                let pressed = keys[i].innerHTML;
+                mysound(pressed)
+                myAnimation(pressed)
+
+                console.log(pressed);
+            });
+        }
+        document.addEventListener("keypress", function (event) {
+            console.log("asdasdasd")
+            mysound(event.key);
+            myAnimation(event.key)
+        });
+
+        function mysound(value) {
+            switch (value) {
+                case "w":
+                    var crash = new Audio("crash.mp3")
+                    crash.play();
+                    break;
+                case "a":
+                    var buzzer = new Audio("buzzer.mp3")
+                    buzzer.play();
+                    break;
+                case "s":
+                    var buzz = new Audio("buzz.mp3")
+                    buzz.play();
+                    break;
+                case "d":
+                    var crock = new Audio("crock.mp3")
+                    crock.play();
+                    break;
+                case "j":
+                    var kick = new Audio("kick-bass.mp3")
+                    kick.play();
+                    break;
+                case "k":
+                    var pin = new Audio("pin.mp3")
+                    pin.play();
+                    break;
+                case "l":
+                    var snare = new Audio("snare.mp3")
+                    snare.play();
+                    break;
+                default:
+                    console.log(value);
+            }
+
+        }
+        function myAnimation(bus) {
+            pres = document.querySelector("." + bus)
+            console.log(pres)
+            pres.classList.add("pressed");
+            setTimeout(function () {
+                pres.classList.remove("pressed")
+            }, 100)
+        }
+    </script>
+</body>
+
+</html>
